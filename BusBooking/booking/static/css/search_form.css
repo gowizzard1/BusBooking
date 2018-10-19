@@ -1,0 +1,79 @@
+.form-flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.form-flex-container.nowrap {
+  flex-wrap: nowrap;
+}
+
+.form-flex-item {
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+.form-flex-item .search-form-text-box {
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.form-flex-item .search-form-text-box::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  padding: 5px;
+}
+.form-flex-item .search-form-text-box::-moz-placeholder { /* Firefox 19+ */
+  padding: 5px;
+}
+.form-flex-item .search-form-text-box:-ms-input-placeholder { /* IE 10+ */
+  padding: 5px;
+}
+.form-flex-item .search-form-text-box:-moz-placeholder { /* Firefox 18- */
+  padding: 5px;
+}
+
+.form-flex-item .search-form-text-box:focus {
+  outline-color: #d74f57;
+}
+
+.location-icon {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.ui-state-active {
+  background-color: #d74f57 !important;
+  border-color: #d74f57 !important;
+}
+
+.submit-button-container {
+  text-align: center;
+}
+
+.search-form-submit-button {
+  width: 150px;
+  height: 35px;
+  background-color: #d74f57;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+ul.ui-autocomplete {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10+ CSS styles go here */
+  .form-flex-container {
+    justify-content: space-around;
+  }
+}
+
+@supports (-ms-ime-align:auto) {
+  .form-flex-container {
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,176 @@
+.bluebus-heading {
+  padding-top: 0.1rem;
+}
+
+.search-form-div {
+  margin-top: 15%;
+}
+
+.search-form-error {
+  width: 95%;
+}
+
+.search-filters-results-container {
+  margin-bottom: 20px;
+}
+
+.search-filters-results-container .row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.filter-container {
+  padding: 15px;
+  background-color: #e9edf1;
+  color: #161616;
+  border-radius: 10px;
+}
+
+.filter-container .filter-field {
+  font-weight: bold;
+}
+
+.filter-field {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 0.5rem;
+}
+
+.filter-field p {
+  margin-bottom: 0rem;
+}
+
+.filter-option-item {
+  font-size: 0.8rem;
+}
+
+label.filter-option-item {
+  margin-left: 10px;
+}
+
+label.filter-option-item span {
+  padding-left: 5px;
+  position: relative;
+  top: 0.5px;
+}
+
+.price-slider, .rating-slider {
+  margin-top: 0.5rem;
+}
+
+.price-range-display, .rating-range-display {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.filter-button-container {
+  text-align: center;
+}
+
+.filter-button, .view-seats {
+  font-size: 0.8rem;
+  width: 105px;
+  height: 25px;
+  background-color: #d74f57;
+  color: white;
+  border: none;
+  border-radius: 15px;
+}
+
+.search-results-container {
+  min-height: 100%;
+  margin-left: 15px;
+  background-color: #ffffff;
+  color: #161616;
+  border-radius: 10px;
+}
+
+.no-buses {
+  text-align: center;
+  padding-top: 12%;
+}
+
+.no-buses-title {
+  font-size: 28px;
+}
+
+.results-row {
+  border-bottom: solid 1.5px #a0a0a0;
+}
+
+.results-row:last-child {
+  border-bottom: none;
+}
+
+.results-flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px;
+}
+
+.results-flex-item {
+  text-align: center;
+}
+
+.results-flex-item p {
+  margin-bottom: 0.3rem;
+}
+
+.brand-name, .timings,
+.seats, .price {
+  font-weight: bold;
+}
+
+.bus-type, .travel-time {
+  color: #3a3a3a;
+}
+
+.rating {
+  width: 110px;
+  text-align: left !important;
+}
+
+.onward-button, .return-button {
+  font-size: 15px;
+  margin: 1px;
+  background-color: #e9edf1;
+  color: #161616;
+  padding: 2px 15px;
+  height: 28px;
+  display: inline-block;
+  text-align: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-weight: bold;
+}
+
+.active {
+  background-color: #d74f57;
+  color: white;
+}
+
+.schedule-details {
+  color: springgreen;
+  font-style: italic;
+}
+
+.toggle-buttons-div {
+  position: absolute;
+  top: -29px;
+  right: 20px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .search-form-div {
+    margin-top: 25%;
+  }
+  label.filter-option-item span {
+    position: relative;
+    top: -3px;
+  }
+  .price-range-display, .rating-range-display {
+    margin-top: 10px;
+  }
+}

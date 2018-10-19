@@ -1,0 +1,32 @@
+body {
+  padding-top: 20px;
+  background-image: url('bluebackground.jpg');
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.error {
+  color: red;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  body {
+    padding-top: 50px;
+  }
+}

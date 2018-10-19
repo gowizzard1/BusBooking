@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>BlueBus</title>
+    <link 
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    {% block stylesheet %}
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    {% endblock %}
+    <!-- Script Tags -->
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <!-- JQuery UI -->
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous">
+    </script>
+    <!-- JQuery UI Support Touch Devices-->
+    <script
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js">
+    </script>
+    <!-- JQuery UI Input Mask-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.60/inputmask/jquery.inputmask.js">
+    </script>
+    <!-- PopperJS(for bootstrap) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous">
+    </script>
+    {% block script %}
+    {% endblock %}
+  </body>
+</html>

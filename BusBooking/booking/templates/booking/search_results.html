@@ -1,0 +1,127 @@
+{% extends 'booking/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+  {{ block.super }}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/search_form.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/search_results.css' %}">
+{% endblock %}
+
+{% block content %}
+  {% include "booking/title.html" %}
+  {% include "booking/search_form.html" %}
+  <br><br><br>
+  <div class="container-fluid search-filters-results-container hide">
+    <div class="row">
+      <div class="col-md-2 no-padding">
+        <div class="filter-container">
+          <form class='filter-form'>
+            <div class="filter-field">
+              <p>Price</p>
+              <div id="price-slider" class="price-slider">
+              </div>
+              <input type="hidden" name="price_lte"/>
+              <input type="hidden" name="price_gte"/>
+              <div class="price-range-display filter-option-item"><span id="price-from"></span> - <span id="price-to"></span></div>
+            </div>
+            <div class="filter-field">
+              <p>Type</p>
+              <label class="filter-option-item">
+                <input type="checkbox" name="bus_type" value="seater"/>
+                <span>Seater</span>
+              </label>
+              <br>
+              <label class="filter-option-item">
+                <input type="checkbox" name="bus_type" value="semi-sleeper"/>
+                <span>Semi-Sleeper</span>
+              </label>
+              <br>
+              <label class="filter-option-item">
+                <input type="checkbox" name="bus_type" value="sleeper"/>
+                <span>Sleeper</span>
+              </label>
+            </div>
+            <div class="filter-field">
+              <p>AC</p>
+              <label class="filter-option-item">
+                <input type="checkbox" name="ac" value="true">
+                <span>A/C</span>
+              </label>
+              <br>
+              <label class="filter-option-item">
+                <input type="checkbox" name="ac" value="false">
+                <span>Non A/C</span>
+              </label>
+            </div>
+            <div class="filter-field">
+              <p>Rating</p>
+              <div id="rating-slider" class="rating-slider"></div>
+              <input type="hidden" name="rating_lte">
+              <input type="hidden" name="rating_gte">
+              <div class="rating-range-display filter-option-item"><span id="rating-from"></span> - <span id="rating-to"></span></div>
+            </div>
+            <div class="filter-button-container">
+              <button type="submit" class="filter-button">Filter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="container-fluid search-results-container">
+          <div class="toggle-buttons-div">
+            <span class="schedule-details"></span>
+            <span class="onward-button">Onward</span>
+            <span class="return-button">Return</span>
+          </div>
+          <div id="search-results-onward">
+          </div>
+          <div id="search-results-return"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- A template to display when there are no buses found -->
+  <div id="empty-schedule-template" class="no-buses hide">
+    <p class="no-buses-title">Opps! No Buses were found</p>
+    <p>
+      There are no buses with current filters found in this route for the selected
+      date of journey. Please modify your filter or try a different route or date.
+    </p>
+  </div>
+  <!-- A template to display schedule items -->
+  <div id="search-result-row" class="row results-row hide">
+    <div class="col-md-6 results-flex-container">
+      <div class="results-flex-item col-md-6">
+        <p class="brand-name">${brand}</p>
+        <p class="bus-type">${type} | ${ac}</p>
+      </div>
+      <div class="results-flex-item col-md-6">
+        <p class="timings">${onward_time} -> ${return_time}</p>
+        <p class="travel-time">${travel_time}</p>
+      </div>
+    </div>
+    <div class="col-md-6 results-flex-container">
+      <div class="results-flex-item col-md-4">
+        <p class="rating">
+          ${rating_html}
+        </p>
+      </div>
+      <div class="results-flex-item col-md-4">
+        <p class="seats">${seats} seats</p>
+      </div>
+      <div class="results-flex-item col-md-4">
+        <p class="price">INR ${price}</p>
+        <button class="view-seats">View Seats</button>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block script %}
+  {{ block.super }}
+  <script src={% static 'js/utils.js' %}></script>
+  <script src={% static 'js/search_form.js' %}></script>
+  <script src={% static 'js/search_results.js' %}></script>
+{% endblock %}

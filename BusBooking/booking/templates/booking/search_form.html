@@ -1,0 +1,42 @@
+<div class="search-form-div">
+  <form class="search-form">
+    {% csrf_token %}
+    <div class="form-flex-container">
+      <div class="form-flex-container nowrap">
+        <div class="form-flex-item">
+          <i class="fas fa-map-marker-alt location-icon"></i>
+          <input
+            type="text" name="from_location" placeholder="From"
+            class="search-form-text-box from-location-input"/>
+          <p class='error search-form-error'></p>
+        </div>
+        <div class="form-flex-item">
+          <i class="fas fa-map-marker-alt location-icon"></i>
+          <input
+            type="text" name="to_location" placeholder="To"
+            class="search-form-text-box to-location-input"/>
+          <p class='error search-form-error'></p>
+        </div>
+      </div>
+      <div class="form-flex-container nowrap">
+        <div class="form-flex-item">
+          <i class="fas fa-calendar-alt location-icon"></i>
+          <input
+            type="text" name="onward_date" placeholder="Journey Date"
+            class="search-form-text-box onward-date"/>
+          <p class='error search-form-error'></p>
+        </div>
+        <div class="form-flex-item">
+          <i class="fas fa-calendar-alt location-icon"></i>
+          <input
+            type="text" name="return_date" placeholder="Return Date(optional)"
+            class="search-form-text-box return-date"/>
+          <p class='error search-form-error'></p>
+        </div>
+      </div>
+    </div>
+    <div class="submit-button-container">
+      <button type="submit" class="search-form-submit-button">Search</button>
+    </div>
+  </form>
+</div>
